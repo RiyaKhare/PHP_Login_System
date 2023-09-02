@@ -1,0 +1,68 @@
+<html>  
+<head>  
+    <title>Create a login form</title>  
+    <!-- // insert style.css file inside index.html   -->
+    <link rel = "stylesheet" type = "text/css" href = "./css/bootstrap.css">   
+    <!-- <link rel = "stylesheet" type = "text/css" href = "style.css">   -->
+</head>  
+<body>  
+    <!-- <div id = "frm">  
+        <h1>Login</h1>   -->
+        <div class="container vh-100">
+            <div class="row justify-content-center h-100">
+               <div class="card w-25 my-auto shadow">
+                   <div class="card-header text-center bg-primary text-white">
+                       <h2>Login Form</h2>
+   
+                   </div>
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <!-- <p>  
+                <label> UserName: </label>  
+                <input type = "text" id ="user" name  = "user" />  
+            </p>  
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" />  
+            </p>  
+            <p>     
+                <input type =  "submit" id = "btn" value = "Login" />  
+            </p>   -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="user" class="form-control" name="user" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="pass" class="form-control" name="pass" />
+            </div>
+            <input type="submit" class="btn btn-primary w-100" value="Login" name="">
+        </form> 
+        <div class="card-footer text-right">
+            <small>&copy; Riya Khare</small>
+        </div> 
+    </div>  
+    <!-- // validation for empty field    -->
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html>
